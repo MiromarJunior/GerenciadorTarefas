@@ -49,7 +49,7 @@ public class TaskController {
             statement.setString(5, task.getNotes());
             statement.setDate(6, new Date(task.getDeadline().getTime()));
             statement.setDate(7, new Date(task.getCreatedAt().getTime()));
-            statement.setDate(6, new Date(task.getUpdatedAt().getTime()));
+            statement.setDate(8, new Date(task.getUpdatedAt().getTime()));
 
             //Executando a Query
             statement.execute();
@@ -64,16 +64,16 @@ public class TaskController {
 
     public void update(Task task) throws SQLException {
 
-        String sql = "UPDATE tasks"
-                + "SET idProject = ?,"
-                + "name = ?,"
-                + "description = ?,"
+        String sql = "UPDATE tasks "
+                + "SET idproject = ?, "
+                + "name = ?, "
+                + "description = ?, "
                 + "completed = ?, "
                 + "notes = ?, "
                 + "deadline = ?, "
                 + "createdAt = ?, "
                 + "updatedAt = ? "
-                + "WHERE   = ?";
+                + "WHERE  id = ? ";
 
         Connection conn = null;
         PreparedStatement statement = null;

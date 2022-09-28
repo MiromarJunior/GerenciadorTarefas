@@ -6,13 +6,16 @@
 package todoapp;
 
 import controller.ProjectController;
+import controller.TaskController;
 /**
  *
  * @author JUNIOR-PC
  */
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import model.Project;
+import model.Task;
 
 public class TodoApp {
 
@@ -21,8 +24,37 @@ public class TodoApp {
      * @throws java.sql.SQLException
      */
     public static void main(String[] args) throws SQLException {
-        // TODO code application logic here
         
+        
+        TaskController tk = new TaskController();
+        Task task = new Task();
+       /* 
+        task.setIdProject(3);
+        task.setDescription("Descricaop tarefa44");
+        task.setName("Nome tarefa44");
+        task.setNotes("NOta da tarefa44");
+        task.setIsCompleted(true);
+        task.setCreatedAt(new Date());
+        task.setDeadline(new Date());
+        task.setUpdatedAt(new Date());
+        task.setId(1);
+        
+        tk.update(task);
+         tk.removeById(1);
+        List<Task> t = tk.getAll(3);
+        System.out.println("Todas"+t.toString());
+        */
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        // TODO code application logic here
+        /*
         ProjectController pc = new ProjectController();
         Project project = new Project();
         
@@ -31,8 +63,18 @@ public class TodoApp {
         project.setDescription("Descrição teste");
         pc.save(project);
         
+        
+         project.setName("Projeto novo1");
+         project.setDescription("Descrição nova");
+        project.setId(2);
+        pc.update(project);
+        
+        pc.removeById(2);
+        
+        
         List<Project> ps = pc.getAll();
-        System.out.println("Total "+ps.size());
+        System.out.println("Total "+ps.toString());
+*/
     }
     
 }

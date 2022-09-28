@@ -57,7 +57,7 @@ public class ProjectController {
 
     public void update(Project project) throws SQLException {
 
-        String sql = "UPDATE projects"
+        String sql = "UPDATE projects "
                 + "SET name = ?,"
                 + "description = ?,"
                 + "createdAt = ?, "
