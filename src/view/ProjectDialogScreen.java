@@ -17,6 +17,7 @@ import model.Project;
  * @author JUNIOR-PC
  */
 public class ProjectDialogScreen extends javax.swing.JDialog {
+
     ProjectController controller;
 
     /**
@@ -154,19 +155,19 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
 
     private void jLabelSaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSaveMouseClicked
         // TODO add your handling code here:
-        Project project = new Project();
-        project.setName(jTextFieldName.getText());
-        project.setDescription(jTextAreaDescription.getText());
-        
-        
-        
+
         try {
+            Project project = new Project();
+            project.setName(jTextFieldName.getText());
+            project.setDescription(jTextAreaDescription.getText());
             controller.save(project);
             JOptionPane.showMessageDialog(rootPane, "Projeto salvo com sucesso !");
-            this.dispose();
+           
         } catch (SQLException ex) {
-            Logger.getLogger(ProjectDialogScreen.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+            //Logger.getLogger(ProjectDialogScreen.class.getName()).log(Level.SEVERE, null, ex);
         }
+         this.dispose();
     }//GEN-LAST:event_jLabelSaveMouseClicked
 
     /**
@@ -180,7 +181,7 @@ public class ProjectDialogScreen extends javax.swing.JDialog {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Java swing ".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

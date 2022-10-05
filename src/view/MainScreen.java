@@ -168,6 +168,11 @@ public class MainScreen extends javax.swing.JFrame {
         jLabelTasksTitle.setText("Tarefas");
 
         jLabelTasksAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/add.png"))); // NOI18N
+        jLabelTasksAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelTasksAddMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelTasksLayout = new javax.swing.GroupLayout(jPanelTasks);
         jPanelTasks.setLayout(jPanelTasksLayout);
@@ -306,6 +311,13 @@ public class MainScreen extends javax.swing.JFrame {
         ProjectDialogScreen projectDialogScreen = new ProjectDialogScreen(this, rootPaneCheckingEnabled);
         projectDialogScreen.setVisible(true);
     }//GEN-LAST:event_jLabelProjetcsAddMouseClicked
+
+    private void jLabelTasksAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTasksAddMouseClicked
+        // TODO add your handling code here:
+        TasktDialogScreen taskDialogScreen = new TasktDialogScreen(this, rootPaneCheckingEnabled);
+        //taskDialogScreen.setProject(null);
+        taskDialogScreen.setVisible(true);
+    }//GEN-LAST:event_jLabelTasksAddMouseClicked
 
     /**
      * @param args the command line arguments

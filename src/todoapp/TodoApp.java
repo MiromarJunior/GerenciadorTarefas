@@ -25,11 +25,11 @@ public class TodoApp {
      */
     public static void main(String[] args) throws SQLException {
         
-        
+        /*
         TaskController tk = new TaskController();
         Task task = new Task();
-       /* 
-        task.setIdProject(3);
+      
+        task.setIdProject(4);
         task.setDescription("Descricaop tarefa44");
         task.setName("Nome tarefa44");
         task.setNotes("NOta da tarefa44");
@@ -37,15 +37,15 @@ public class TodoApp {
         task.setCreatedAt(new Date());
         task.setDeadline(new Date());
         task.setUpdatedAt(new Date());
-        task.setId(1);
-        
-        tk.update(task);
-         tk.removeById(1);
-        List<Task> t = tk.getAll(3);
+        //task.setId(4);
+        tk.save(task);
+       // tk.update(task);
+        // tk.removeById(1);
+        List<Task> t = tk.getAll(4);
         System.out.println("Todas"+t.toString());
-        */
       
-        
+      
+        */
         
         
         

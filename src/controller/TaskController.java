@@ -22,7 +22,7 @@ import util.ConnectionFactory;
 public class TaskController {
 
     public void save(Task task) throws SQLException {
-        String sql = "INSERT INTO tasks(idProject,"
+        String sql = "INSERT INTO tasks(idproject,"
                 + "name,"
                 + "description,"
                 + "completed, "
@@ -55,7 +55,9 @@ public class TaskController {
             statement.execute();
 
         } catch (RuntimeException e) {
+            
             throw new RuntimeException("Erro ao salvar  tarefa " + e.getMessage());
+          
         } finally {
             ConnectionFactory.closeConnection(conn, statement);
         }
@@ -126,7 +128,7 @@ public class TaskController {
             statement.execute();
 
         } catch (RuntimeException e) {
-            throw new RuntimeException("Erro ao deletar tarefa " + e.getMessage());
+            throw new RuntimeException("Erro ao deletar tarefa " + e);
         } finally {
             ConnectionFactory.closeConnection(conn, statement);
 
