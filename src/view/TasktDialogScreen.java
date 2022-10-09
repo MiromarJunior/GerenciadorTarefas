@@ -57,6 +57,7 @@ public class TasktDialogScreen extends javax.swing.JDialog {
         jTextAreaNotas = new javax.swing.JTextArea();
         jLabelNotas = new javax.swing.JLabel();
         jFormattedTextFieldPrazo = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldPrazo.setToolTipText("DD/MM/YYYY");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -280,5 +281,4 @@ public class TasktDialogScreen extends javax.swing.JDialog {
     public void setProject(Project project) {
         this.project = project;
     }
-
 }

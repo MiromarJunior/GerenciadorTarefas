@@ -24,6 +24,9 @@ public class TodoApp {
      * @throws java.sql.SQLException
      */
     public static void main(String[] args) throws SQLException {
+    	TaskController tk = new TaskController();
+    	List<Task> t = tk.getAll(4);
+        System.out.println("Todas"+t.toString());
         
         /*
         TaskController tk = new TaskController();
